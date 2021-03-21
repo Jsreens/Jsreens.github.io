@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WA8</title>
+</head>
+<body>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+   
+    <div class ="container">
+        <!-- <h1 class="align-middle">Chart JS Weekly Assignment 7</h1> -->
+        <canvas id="myChart"></canvas>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+$.getJSON("DenverTimeArrests.json", function(data_from_file){
+
+    var ctx = document.getElementById('myChart').getContext('2d');
+    console.log("hey you got data")
+    console.log(data_from_file)
+
+    var chart = new Chart(ctx, {
+        // The type of chart we want to create
+        type: 'bar',
+
+        // The data for our dataset
+        data: {
+            labels: ['x', 'y'],
+            datasets: [{
+                label: 'Fake data',
+                backgroundColor: 'rgb(255, 99, 132)',
+                borderColor: 'rgb(255, 99, 132)',
+                data: [data_from_file["x"], data_from_file["y"]],
+            }]
+        },
+
+        // Configuration options go here
+        options: {
+        scales: {
+                yAxes: [{
+                    display: true,
+                    stacked: true,
+                    ticks: {
+                        min: 0, // minimum value
+                        max: 10 // maximum value
+                    }
+                }]
+            }
+        }
+    });
+
+})
+
+</script>
+            <p class="note note-info">
+      <strong>Improvements:</strong> The first improvement I made was I added a hover effect where it creates a black boarder around the bar chart. Along with this I added a title to the graph and I also changed the font to Bondoni. Lastly, I modified the size of the graph and added bootstrap styling to make the page look better.
+    </p>
+    </div>
+
+
+</body>
+</html>
+
