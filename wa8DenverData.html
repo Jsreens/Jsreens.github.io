@@ -34,7 +34,7 @@ $.getJSON("https://jsreens.github.io/DenverTimeArrests.json", function(data_from
 
         // The data for our dataset
         data: {
-            labels: ['x', 'y'],
+            labels: data_from_file.values(),
             datasets: [{
                 label: 'Fake data',
                 backgroundColor: 'rgb(255, 99, 132)',
