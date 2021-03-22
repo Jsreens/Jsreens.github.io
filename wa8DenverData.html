@@ -36,12 +36,13 @@
                         var stackedBarChart = new Chart(ctx, {
                             // The type of chart we want to create
                             type: 'bar',
-                            xAxisID = "Hour",
-                            yAxisID = "Precinct",
+                           
 
                             // The data for our dataset
                             data: {
                                 labels: ['00', '01','02','03','04','05','05','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23'],
+                                xAxisID: 'Hour',
+                                yAxisID: 'Precinct',
                                 datasets: [{
                                     label: 'Arrests',
                                     // backgroundColor: 'rgb(255, 99, 132)',
