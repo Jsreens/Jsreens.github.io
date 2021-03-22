@@ -15,7 +15,7 @@
     <div class ="container">
         <div class = "card text center" style="width: 70rem;">
         <div class = "card-body">
-            <h2>Graph of Arrests by Denver Police in November By Hour</h2>
+            <h2>Hourly Graph of Arrest Outcomes by Denver Police in November </h2>
         <!-- <h1 class="align-middle">Chart JS Weekly Assignment 7</h1> -->
 
         <canvas id="barchart"></canvas>
@@ -25,7 +25,8 @@
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
 
             <script type="text/javascript">
-
+                const xAxis = [];
+                cons 
                     $.getJSON("https://jsreens.github.io/DenverTimeArrests.json", function(data_from_arrest){
                         $.getJSON("https://jsreens.github.io/DenverTimeFree.json", function(data_from_free){
 
@@ -64,10 +65,7 @@
                                                     stacked: true,
                                                     ticks: {beginAtZero: true},
                                                      }],
-                                                xAxes: [{stacked: true,
-                                                        xAxisID: 'Hour',
-                                                        yAxisID: 'Precinct',
-                                                        }],
+                                                xAxes: [{stacked: true}],
                                             }
 
                                          }
@@ -78,7 +76,7 @@
 
             </script>
                     <p class="note note-info">
-                  <strong>Take aways:</strong> After conducting an analysis which can be found <a href = "https://github.com/Jsreens/Jsreens.github.io/blob/main/WA8_DenverPoliceData.ipynb">here</a>, I found that out of 6365 total incidents, only 4.264 percent were arrests. This is 985 total arrests in the month of November. I think this is a very interesting statistic to point out for a couple of reasons. Assuming that all non-arrests are non violent, it is safe to say that in the large majority of precincts a cop, but more spefically the multiple weapons they carry are unnecessary and a waste of resources to the city.
+                  <strong>Take aways:</strong> After conducting a time/precinct analysis, which can be found <a href = "https://github.com/Jsreens/Jsreens.github.io/blob/main/WA8_DenverPoliceData.ipynb">here</a>, I found that out of 6365 total incidents, only 4.264 percent were arrests. This is 985 total arrests in the month of November. I think this is a very interesting statistic to point out for a couple of reasons. Assuming that all non-arrests are non violent, it is safe to say that in the large majority of precincts, a police officer, but more spefically the multiple weapons they carry are unnecessary and a waste of resources to the city.
               </p>
               <p> You can get a visual representation of this by looking at the stacked bar chart above. This 
         </div>
