@@ -16,7 +16,7 @@
         <div class = "card">
         <div class = "card-body">
         <!-- <h1 class="align-middle">Chart JS Weekly Assignment 7</h1> -->
-        
+
         <canvas id="barchart"></canvas>
 
             <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
@@ -28,7 +28,7 @@
                     $.getJSON("https://jsreens.github.io/DenverTimeArrests.json", function(data_from_arrest){
                         $.getJSON("https://jsreens.github.io/DenverTimeFree.json", function(data_from_free){
 
-                        var ctx = document.getElementById('myChart').getContext('2d');
+                        var ctx = document.getElementById('barchart').getContext('2d');
                         console.log("here is my data!")
                         console.log(data_from_free)
 
