@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Week 12 Slides</title>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reset.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/black.min.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/monokai.min.css" id="highlight-theme">
+
+		
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h3>INFO 3402: Information Exposition WA 10</h3>
+					<p style="color:#CFB87C; font-weight:bold;">Johnny Sreenan</p>
+					<p style="color:#565A5C">Reveal JS Tutorial</h5>
+				</section>
+				
+
+				<section>
+					<h2>Outline</h2>
+					<ul>
+						<li>Introduction and Motivations</li>
+						<li>Going over the Feature</li>
+						<li>Next Steps and resources</li>
+					</ul>
+				</section>
+				<section>
+					<section>
+						<h3>Introduction to the issue</h3>
+							<p><b>Displaying math equations</b></p>
+							<p>If you need to display a math equation in your presentation, Reveal uses a MathJax plugin to make this possible.</p>
+							<p>This allows the creator of the presentation to accurate display equations used using the correct characters and spacing.</p>
+							<p> By using this feature, it eliminates the issue of not being able to format equations properly when displaying findings. Moverover, it helps with the presentation maintain a professional and organized theme.</p>
+					</section>
+					<section>
+						<h3> Equations in Reveal</h3>
+					
+						<h4>Mass-energy equivalence</h4>
+					  \[\begin{aligned}
+
+					  E=MC^2
+					
+					  \end{aligned} \]
+					
+					</section>
+					<section>
+						<h3> How to set up equations in Reveal</h3>
+					<p> First you need to import the correct reveal math plugin which can be found in the documentation here <a href="https://revealjs.com/math/">here.</a> When copying in this started code, Instead of using<pre><code data trim data-noescape>
+						<script src="plugin/math/math.js"> </script>
+					</code>
+					</section>
+
+					<section>
+						<h3>Next Steps and Resources</h3>
+					</section>
+				</section>
+
+			
+			</div>
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/notes/notes.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/markdown/markdown.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/math/math.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/math/plugin.min.js"></script>
+	<script>
+	  Reveal.initialize({
+	    math: {
+	      mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+	      config: 'TeX-AMS_HTML-full',
+	      // pass other options into `MathJax.Hub.Config()`
+	      TeX: { Macros: { RR: "{\\bf R}" } }
+	    },
+	    plugins: [ RevealMath ]
+	  });
+	</script>
+		
+</html>
