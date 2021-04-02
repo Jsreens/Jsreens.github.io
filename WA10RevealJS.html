@@ -8,11 +8,10 @@
 
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reset.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/black.min.css" id="theme">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/moon.min.css" id="theme">
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/monokai.min.css" id="highlight-theme">
-
 		
 	</head>
 	<body>
@@ -34,34 +33,79 @@
 					</ul>
 				</section>
 				<section>
-					<section>
 						<h3>Introduction to the issue</h3>
 							<p><b>Displaying math equations</b></p>
 							<p>If you need to display a math equation in your presentation, Reveal uses a MathJax plugin to make this possible.</p>
 							<p>This allows the creator of the presentation to accurate display equations used using the correct characters and spacing.</p>
 							<p> By using this feature, it eliminates the issue of not being able to format equations properly when displaying findings. Moverover, it helps with the presentation maintain a professional and organized theme.</p>
 					</section>
+				<section>
 					<section>
+						<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fsciencepost.fr%2Fwp-content%2Fuploads%2F2018%2F08%2Falbert-einstein-1505932669R3h.jpg&f=1&nofb=1" alt="Albert Einstein" width = 300px height="400">
+						
 						<h3> Equations in Reveal</h3>
 					
 						<h4>Mass-energy equivalence</h4>
 					  \[\begin{aligned}
 
-					  E=MC^2
+					  E=MC^{2}
 					
 					  \end{aligned} \]
 					
 					</section>
 					<section>
-						<h3> How to set up equations in Reveal</h3>
-					<p> First you need to import the correct reveal math plugin which can be found in the documentation here <a href="https://revealjs.com/math/">here.</a> When copying in this started code, Instead of using<pre><code data trim data-noescape>
-						<script src="plugin/math/math.js"> </script>
-					</code>
+							<h3> How to set up equations in Reveal</h3>
+						<p> First you need to import the correct reveal math plugin which can be found in the documentation here <a href="https://revealjs.com/math/">here.</a> When copying in this starter code, instead of using
+						<pre>
+							<code data-trim data-noescape>&lt;script src="plugin/math/math.js"&gt;&lt;/script&gt;</code>
+						</pre>
+						<p>Head over to a <a href="https://cdnjs.com/libraries/reveal.js">Content Delivery network.</a> to import the reveal from the web. For my example, I used</p>
+						<pre>
+							<code data-trim data-noescape>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.js&gt;&lt;/script&gt;</code>
+						</pre>
 					</section>
 
 					<section>
-						<h3>Next Steps and Resources</h3>
+						<h3> How to set up equations in Reveal</h3>
+						<p>Lastly, from the documentation, import the plugin configuration</p>
+						<pre>
+							<code data-trim data-noescape><script type="text/template">
+							<script type="text/template">
+							<script src="plugin/math/math.js">&lt;/script>
+							<script>
+							  Reveal.initialize({
+							    math: {
+							      mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+							      config: 'TeX-AMS_HTML-full',
+							      // pass other options into `MathJax.Hub.Config()`
+							      TeX: { Macros: { RR: "{\\bf R}" } }
+							    },
+							    plugins: [ RevealMath ]
+							  });
+							</script>
+						</script></code>
+						</pre>
+						
 					</section>
+					<section>
+						<h3>Coding Equations</h3>
+						<p> When Starting your equation, you must follow the following syntax. Data-Trim is used to delete the surrounding whitespace within the &lt;code&gt; tag</p>
+						<pre><code data-trim class="html" data-line-numbers=1,5|2-4|2|3|4><script type="text/template">
+							<pre><code data-trim>
+								\[\begin{aligned}
+								E=MC^{2}
+								\end{aligned} \]
+							</code></pre>
+						</script></pre></code>
+						</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<h3>Next Steps and Resources</h3>
+					<p>Some challenges I faced when using this was learning the latex equation language to know how to create the correct symbols. Along with checking out the documentation <a href="https://revealjs.com/math/">here,</a> here are some helpful resources: <a href="https://en.wikibooks.org/wiki/LaTeX/Mathematics/">Latex,</a>
+					<a href="https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols">Latex Symbols</a>
+					</p>
 				</section>
 
 			
@@ -70,19 +114,24 @@
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/notes/notes.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/markdown/markdown.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/highlight.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/math/math.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/math/plugin.min.js"></script>
-	<script>
-	  Reveal.initialize({
-	    math: {
-	      mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
-	      config: 'TeX-AMS_HTML-full',
-	      // pass other options into `MathJax.Hub.Config()`
-	      TeX: { Macros: { RR: "{\\bf R}" } }
-	    },
-	    plugins: [ RevealMath ]
-	  });
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				slideNumber: 'h/v',
+				math: {
+				      mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+				      config: 'TeX-AMS_HTML-full',
+				      // pass other options into `MathJax.Hub.Config()`
+				      TeX: { Macros: { RR: "{\\bf R}" } }
+				    },
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealHighlight, RevealNotes, RevealMath ]
+			});
 	</script>
 		
 </html>
