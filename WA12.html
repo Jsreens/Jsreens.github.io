@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>WA 12</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/moon.min.css" id="theme">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/monokai.min.css" id="highlight-theme">
+
+    <!-- Loading Vega-->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.19.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.0.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.15.1"></script>
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h2>INFO 3402: Information Exposition</h3>
+          <p style="color:#CFB87C; font-weight:bold;">Johnny Sreenan</p>
+          <p style="color:#565A5C">Weekly Assignment #12</p>
+        </section>
+        
+        <section>
+          <section>
+              <h2>Visualization 1</h2>
+              <div id="vis-bar"></div>
+                <script type="text/javascript">
+                var spec = {
+                 "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+                  "width": 400,
+                  "height": 400,
+                  "data": {"url": "https://vega.github.io/vega-datasets/data/stocks.csv"},
+                               "mark": "line",
+                  "encoding": {
+                    "x": {"field": "date", "type": "temporal"},
+                    "y": {"field": "price", "type": "quantitative"},
+                    "color": {"field": "symbol", "type": "nominal"}
+                  }
+                }
+                var opt = {"renderer": "canvas", "actions": false};
+                vegaEmbed("#vis-bar", spec, opt);
+                </script>
+                </section>
+
+                <section>
+                <h2> Code Block Documentation </h2>
+                <p>Adding colors to represent each Stock Symbol. </p>
+
+                        <code data-trim class='js' data-line-numbers=17><pre>
+                          var spec = {
+                         "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+                          "width": 400,
+                          "height": 400,
+                          "data": {"url": "https://vega.github.io/vega-datasets/data/stocks.csv"},
+                                       "mark": "line",
+                          "encoding": {
+                            "x": {"field": "date", "type": "temporal"},
+                            "y": {"field": "price", "type": "quantitative"},
+                            "color": {"field": "symbol", "type": "nominal"}
+                          }
+                        }
+                    </pre></code>
+                </section>
+            </section>
+            <section>
+              <section>
+              <h2>Visualization 2</h2>
+              <div id="vis-line-weather"></div>
+              <script type="text/javascript">
+                 var spec2 = {
+                 "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+                  "width": 400,
+                  "height": 400,
+                  "data": {"url": "https://vega.github.io/vega-datasets/data/weather.csv"},
+                  "layer": [
+                    {
+                      "mark": "line",
+                      "encoding": {
+                        "x": {
+                          "timeUnit": "month",
+                          "field": "date",
+                          "type": "temporal"
+                        },
+                        "y": {
+                          "aggregate": "mean",
+                          "field": "temp_min",
+                          "type": "quantitative"
+                        }
+                      }
+                    },
+                    {
+                      "mark": "line",
+                      "encoding": {
+                        "x": {
+                          "timeUnit": "month",
+                          "field": "date",
+                          "type": "temporal"
+                        },
+                        "y": {
+                          "aggregate": "mean",
+                          "field": "temp_max",
+                          "type": "quantitative"
+                        },
+                        
+
+                      }
+                    }
+                  ]
+              }
+                var opt = {"renderer": "canvas", "actions": false};
+                vegaEmbed("#vis-line-weather", spec2, opt);
+              </script>
+            </section>
+            <section>
+                <h2> Code Block Documentation </h2>
+                <p>Using Layers to graph min/max Temp</p>
+
+                        <code data-trim class='js' data-line-numbers=17><pre>
+                          "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+                          "width": 400,
+                          "height": 400,
+                          "data": {"url": "https://vega.github.io/vega-datasets/data/weather.csv"},
+                          "layer": [
+                            {
+                              "mark": "line",
+                              "encoding": {
+                                "x": {
+                                  "timeUnit": "month",
+                                  "field": "date",
+                                  "type": "temporal"
+                                },
+                                "y": {
+                                  "aggregate": "mean",
+                                  "field": "temp_min",
+                                  "type": "quantitative"
+                                }
+                              }
+                            },
+                            {
+                              "mark": "line",
+                              "encoding": {
+                                "x": {
+                                  "timeUnit": "month",
+                                  "field": "date",
+                                  "type": "temporal"
+                                },
+                                "y": {
+                                  "aggregate": "mean",
+                                  "field": "temp_max",
+                                  "type": "quantitative"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                    </pre></code>
+                </section>
+              </section>
+
+
+
+            
+
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/highlight.min.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        slideNumber: 'h/v',
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealHighlight ]
+      });
+    </script>
+  </body>
+</html>
+
+
+    
