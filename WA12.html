@@ -73,12 +73,14 @@
             <section>
               <section>
               <h2>Visualization 2</h2>
+               <p> I tried to implement a table to indicate which line is max and which line is min, but I had a hard time changing colors for each layer.</p>
+
               <div id="vis-line-weather"></div>
               <script type="text/javascript">
                  var spec2 = {
                  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-                  "width": 400,
-                  "height": 400,
+                  "width": 300,
+                  "height": 300,
                   "data": {"url": "https://vega.github.io/vega-datasets/data/weather.csv"},
                   "layer": [
                     {
@@ -119,7 +121,6 @@
                 var opt = {"renderer": "canvas", "actions": false};
                 vegaEmbed("#vis-line-weather", spec2, opt);
               </script>
-               <p> I tried to implement a table to indicate which line is max and which line is min, but I had a hard time changing colors for each layer.</p>
             </section>
             <section>
                 <h2> Code Block Documentation </h2>
