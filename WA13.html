@@ -26,6 +26,8 @@
     <p>Paragraph 1</p>
     <section>
               <!-- <h2>Visualization 1</h2> -->
+              <h2>DogeCoin Volume from the past 6 years</h2>
+
               <div id="vis-bar"></div>
                 <script type="text/javascript">
                 var spec = {
@@ -53,7 +55,9 @@
                 </section>
                 <section>
               <!-- <h2>Visualization 1</h2> -->
+              <h2>Bitcoin Volume from the past year</h2>
               <div id="btc-line"></div>
+
                 <script type="text/javascript">
                 var bitcoin = {
   				"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
@@ -61,18 +65,14 @@
                   "height": 400,
                   "data": {"url": "https://raw.githubusercontent.com/Jsreens/Jsreens.github.io/main/BTC-USD.csv"},
                   "transform": [{
-								"filter": {
-									"field": "Date", 
-									"timeUnit": "year", 
-									"lt": 2020
-                  }
+							
 							}],
                   "mark": "line",
                   "encoding": {
                     "x": {"field": "Date", "type": "temporal"},
                     "y": {"field": "Volume", "type": "quantitative"}
                   }
-}
+				}
                 var opt = {"renderer": "canvas", "actions": false};
                 vegaEmbed("#btc-line", bitcoin, opt);
                 </script>
