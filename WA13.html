@@ -23,7 +23,7 @@
   <div id="top">
     <h1>Weekly assignment #13: What does the price of Dogecoin reveal to us?</h1>
    <div class="reveal">
-    <p>Paragraph 1</p>
+    <p>Over the past year we have seen an incredible serge of volume transfer over to the <a href="- https://en.wikipedia.org/wiki/Digital_currency"> digital currency </a>space for a wide variety of reasons. New investors are typically drawn to the promising advice offered by youtubers and other influencers. <a href="- https://en.wikipedia.org/wiki/Cryptocurrency"> Cryptocurrency</a> is an extremely <a href="https://en.wikipedia.org/wiki/Volatility_(finance)"> Volatile </a>market, and this is partially due to its unregulated nature and the <a href=" https://en.wikipedia.org/wiki/Pump_and_dump"> pump and dump</a> schemes that go hand-in-hand with these influencers. However so-called <a href="https://thelatestbreakingnews.com/a-brief-history-of-dogecoin-and-other-meme-coins/">’Meme Coins’</a>such as <a href="https://en.wikipedia.org/wiki/Dogecoin"> Dogecoin</a>, which was created to be a joke in response to the many alternate projects created using blockchain, has helped me realize the power of online communities in finance. </p>
     <section>
               <!-- <h2>Visualization 1</h2> -->
               <h2>DogeCoin Volume from the past 6 years</h2>
@@ -40,7 +40,6 @@
 									"field": "Date", 
 									"timeUnit": "year", 
 									"lt": 2021,
-                  "lte":2020
                   }
 							}],
                       "mark": "line",
@@ -53,30 +52,60 @@
                 var opt = {"renderer": "canvas", "actions": false};
                 vegaEmbed("#vis-bar", spec, opt);
                 </script>
-                </section>
-                <section>
-              <!-- <h2>Visualization 1</h2> -->
+
               <h2>Bitcoin Volume from the past year</h2>
               <div id="btc-line"></div>
 
                 <script type="text/javascript">
                 var bitcoin = {
-  				"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+          "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
                   "width": 400,
                   "height": 400,
                   "data": {"url": "https://raw.githubusercontent.com/Jsreens/Jsreens.github.io/main/BTC-USD.csv"},
                   "transform": [{
-							
-							}],
+              
+              }],
                   "mark": "line",
                   "encoding": {
                     "x": {"field": "Date", "type": "temporal"},
                     "y": {"field": "Volume", "type": "quantitative"}
                   }
-				}
+        }
                 var opt = {"renderer": "canvas", "actions": false};
                 vegaEmbed("#btc-line", bitcoin, opt);
                 </script>
+
+                <h2>DogeCoin Volume: April 25th 2020 - Present</h2>
+              <div id="doge-line-2020"></div>
+
+                <script type="text/javascript">
+                var doge2020 = {
+          "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+                  "width": 400,
+                  "height": 400,
+                  "data": {"url": "https://raw.githubusercontent.com/Jsreens/Jsreens.github.io/main/DOGE-USD-2020_2021.csv"},
+                  "transform": [{
+                "filter": {
+                  "field": "Date", 
+                  "timeUnit": "year", 
+                  "lte":2020 
+                  }
+              }],
+                      "mark": "line",
+                  "encoding": {
+                    "x": {"field": "Date", "type": "temporal"},
+                    "y": {"field": "Volume", "type": "quantitative"}
+                  }
+  
+}
+                var opt = {"renderer": "canvas", "actions": false};
+                vegaEmbed("#doge-line-2020", doge2020, opt);
+                </script>
+
+                </section>
+                <section>
+              <!-- <h2>Visualization 1</h2> -->
+              
                 </section>
             </div>
 
