@@ -21,13 +21,49 @@
 <body>
   
   <div id="top">
-    <h1>Weekly assignment #13: What does the price of Dogecoin reveal to us?</h1>
+    <h1>Weekly assignment #13 </h1>
+    <h2>What does the price of Dogecoin reveal to us?</h2>
+
    <div class="reveal">
     <p>Over the past year we have seen an incredible serge of volume transfer over to the <a href="- https://en.wikipedia.org/wiki/Digital_currency"> digital currency </a>space for a wide variety of reasons. New investors are typically drawn to the promising advice offered by youtubers and other influencers. <a href="- https://en.wikipedia.org/wiki/Cryptocurrency"> Cryptocurrency</a> is an extremely <a href="https://en.wikipedia.org/wiki/Volatility_(finance)"> Volatile </a>market, and this is partially due to its unregulated nature and the <a href=" https://en.wikipedia.org/wiki/Pump_and_dump"> pump and dump</a> schemes that go hand-in-hand with these influencers. However so-called <a href="https://thelatestbreakingnews.com/a-brief-history-of-dogecoin-and-other-meme-coins/">’Meme Coins’</a>such as <a href="https://en.wikipedia.org/wiki/Dogecoin"> Dogecoin</a>, which was created to be a joke in response to the many alternate projects created using blockchain, has helped me realize the power of online communities in finance. </p>
     <section>
-              <!-- <h2>Visualization 1</h2> -->
-              <h2>DogeCoin Volume from the past 6 years</h2>
+              <h3>Bitcoin Daily Volume from the past 4 years</h3>
+              <div id="btc-line"></div>
 
+                <script type="text/javascript">
+                var bitcoin = {
+          "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+                  "width": 400,
+                  "height": 400,
+                  "data": {"url": "https://raw.githubusercontent.com/Jsreens/Jsreens.github.io/main/BTC-USD.csv"},
+                  "transform": [{
+              
+              }],
+                  "mark": "line",
+                  "encoding": {
+                    "x": {"field": "Date", "type": "temporal"},
+                    "y": {"field": "Volume", "type": "quantitative","aggregate":"mean"}
+                  }
+        }
+                var opt = {"renderer": "canvas", "actions": false};
+                vegaEmbed("#btc-line", bitcoin, opt);
+                </script>
+              <p><strong>Bitcoin Dominance</strong></p>
+              <p>Since Bitcoin has an incredible influence on the other coins in the market called bitcoin dominance, I first investigated bitcoins daily volume over the past four years. The first datapoint that stood out to me was how much the daily volume had increased a couple months ago, around the time bitcoin reached an all time high. From the graph above you can see volume spiked to around 350 Billion dollars in a single day. To give some context, Amazons average daily trading volume is around 2-4 billion. This crazy spike in trading volume shows that there had to be a lot of people talking about bitcoin. For weeks during this time period, bitcoin and other cryptocurrencies have been mentioned on news stations and all-over social media. I believe this coverage of the technology, along with the speculative nature(many investors don’t know how to find the <a href="https://blog.makerdao.com/how-does-cryptocurrency-have-value-and-why-should-i-care/"> value of different cryptocurrencies</a>) of these coins. In turn this could lead to a burst of trading volume on certain days. But how does this relate to Dogecoin?</p>  
+              
+
+              <p><strong> An Exception </strong></p>
+              <p>While dogecoin experienced a similar pump, you can also see in the graph below that it was not it’s highest and not nearly as explosive. In fact, unlike bitcoin it wasn’t even close to it’s all time high daily trading volume.</p>
+              <p><strong>According to Blockchain researcher Toju Ometoruwa</strong>:</p>
+              <blockquote>
+                <p>"Bitcoin has established itself as the first and most dominant cryptocurrency. Despite the rise in Altcoins, Bitcoin still has the advantage of being widely recognized and operating as the primary trading pair for all other Altcoins."</p>
+              </blockquote>
+
+              <p>Is dogecoin an exception to this <a href=" https://cryptocurrencyfacts.com/what-are-trading-pairs-in-cryptocurrency/">trading pair</a>? I think the answer to this is yes. From the graph below, you can see a handful of days where trading volume of dogecoin is heavily increased. While BTC and other coins experience similar volatility, these coins are more influenced by more tangible and technical aspects, therefore leading to more stability. Dogecoin, on the otherhand, does not have a practical usecase, strong fundamentals, or even a good dev team behind the scenes. It simply has the influence of Elon Musk and the power of organized online communities.</p>
+
+
+
+              <h3>DogeCoin Daily Volume from the past 6 years</h3>
               <div id="vis-bar"></div>
                 <script type="text/javascript">
                 var spec = {
@@ -53,29 +89,10 @@
                 vegaEmbed("#vis-bar", spec, opt);
                 </script>
 
-              <h2>Bitcoin Volume from the past year</h2>
-              <div id="btc-line"></div>
-
-                <script type="text/javascript">
-                var bitcoin = {
-          "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-                  "width": 400,
-                  "height": 400,
-                  "data": {"url": "https://raw.githubusercontent.com/Jsreens/Jsreens.github.io/main/BTC-USD.csv"},
-                  "transform": [{
-              
-              }],
-                  "mark": "line",
-                  "encoding": {
-                    "x": {"field": "Date", "type": "temporal"},
-                    "y": {"field": "Volume", "type": "quantitative"}
-                  }
-        }
-                var opt = {"renderer": "canvas", "actions": false};
-                vegaEmbed("#btc-line", bitcoin, opt);
-                </script>
-
-                <h2>DogeCoin Volume: April 25th 2020 - Present</h2>
+              <p><strong> Communities In Action </strong></p>
+                
+                <p> Dogecoin is a very interesting coin compared to others because of the following behind it. In order to reach price targets, holders of the coin will storm social media to try and convince as many people as possible possible to buy the coin. On 4/20 this year, according to <a href=" https://finance.yahoo.com/news/dogecoin-price-dogeday-420-cryptocurrency-doge-explainer-103816909.html"> yahoo finance</a> , fans tried to push the price of dogecoin to 1$ as a celebrating for 'Dogeday' however this proved unsuccessful. The good news for doge is, while this push seemed unsuccessful, there have been many pumps which in fact were very promising. As I briefly mentioned earlier, Dogecoin daily trading volume peaked separately from bitcoin, a couple months earlier. In the graph below you can see Dogecoin trading volume over the last year to better see this pump. This is when you see the power of online communities at play. Before this sudden increase, Tik Tok users were participating in a viral trend which happened to be centered around <a href=" https://www.tiktok.com/tag/dogecointiktokchallange">#DogecoinTiktokChallange</a>. This challenge certainly had a roll to play in this surge as Tik Tok was also gaining a lot of popularity during this time. Without this trend, it’s possible we wouldn’t have seen this increase in volume until much later when bitcoin spiked. </p>
+                <h3>DogeCoin Daily Volume: April 25th 2020 - Present</h3>
               <div id="doge-line-2020"></div>
 
                 <script type="text/javascript">
@@ -101,50 +118,17 @@
                 var opt = {"renderer": "canvas", "actions": false};
                 vegaEmbed("#doge-line-2020", doge2020, opt);
                 </script>
+              <p><strong>Concluding Thoughts </strong></p>
 
+                <p>As we enter in a new age of technology, blockchain will continue to innovate in ways that may be surprising to normal consumers, dogecoin is no exception.  One thing that is apparent from the historical data in this coin is, the future of this coin is extremely uncertain. While we have seen the power of online communities through reddit pages like <a href ="https//www.reddit.com/r/wallstreetbets/">r/wallstreetbets</a> ,<a href ="https//www.reddit.com/r/dogecoin/">r/dogecoin</a>, and Tik Tok trends relating to dogecoin, there is no guarantee that support for this project will continue. Think of Dogecoin like an online influencer; the communities surrounding the influencer can be extremely supportive, toxic, or just plain confusing. Dogecoin has taught me that there is not loyally in the online space. Just like followers finding new influencers, I believe dogecoin enthusiasts will eventually lose interest. Passion will die down and they will move on to the next meme coin, like poo coin for example. That being said, we are currently in the dogecoin era, so make the most of it while you can! </p>
                 </section>
                 <section>
               <!-- <h2>Visualization 1</h2> -->
               
                 </section>
-            </div>
-
-    <p><em>Italic</em>, <strong>bold</strong>, and <code>monospace</code>. Itemized lists look like:</p>
-    <ul>
-      <li>this one</li>
-      <li>that one</li>
-      <li>the other one</li>
-    </ul>
-
-    <p><strong>Here's a block quote</strong>:</p>
-    <blockquote>
-      <p>Man surprised me most about humanity. Because he sacrifices his health in order to make money. Then he sacrifices money to recuperate his health. And then he is so anxious about the future that he does not enjoy the present; the result being that he does not live in the present or the future; he lives as if he is never going to die, and then dies having never really lived. -James J Lachard</p>
-    </blockquote>
-
-    <h2 id="an-h2-header">An h2 header</h2>
-    <p><strong>Some code blocks</strong></p>
-    <pre><code>define foobar() {
-    print &quot;Welcome to flavor country!&quot;;
-}</code></pre>
-  <h3 id="an-h3-header">An h3 header</h3>
-  <p>A nested list:</p>
-  <ol style="list-style-type: decimal">
-    <li>
-      <p>First, get these ingredients:</p>
-      <ul>
-        <li>carrots</li>
-        <li>celery</li>
-        <li>lentils</li>
-      </ul>
-    </li>
-    <li>
-      <p>Boil some water.</p>
-    </li>
-    <li>
-      <p>Dump everything in the pot and follow this algorithm:</p>
-      </li>
-  </ol>
   </div>
+</div>
+
 
 <script>
   var themes = [
