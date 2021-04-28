@@ -91,16 +91,6 @@ strike {
     font-size: 24px;
 }
 
-.photo-bg {
-    background-image: url(media/westeros.jfif);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-footer p {
-    font-size: 12px;
-}
 
 @media (max-width: 1199px) {
     body {
