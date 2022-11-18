@@ -32,7 +32,14 @@ _Copying Arrays_
 *   counters = [0] \* 8 - All 8 cells reference the same object! - We rely on the object being mutable - counters[2] += 1 does not change the value of the existing int instances - computes a new integer
 *   `primes.extend(extras)` will add the references to the first list
 
-## Dictionaries
+## Lists 
+
+**What is a List?**
+*   Lists are one of 4 built-in data types in Python used to store collections of data, the other 3 are Tuples, Set, and Dictionary, all with different qualities and usage.
+*   Lists are used to store multiple items in a single variable 
+*   Lists are created using square brackets: ''' a = [“foo”, “bar”, “baz”, “qux”, “quux”, “corge”].
+*   Python follows a zero-based indexing approach  
+
 
 ## Stacks, Queues and Deques
 
