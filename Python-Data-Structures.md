@@ -37,7 +37,9 @@ _Copying Arrays_
 **What is a List?**
 *   Lists are one of 4 built-in data types in Python used to store collections of data, the other 3 are Tuples, Set, and Dictionary, all with different qualities and usage.
 *   Lists are used to store multiple items in a single variable 
-*   Lists are created using square brackets: ''' a = [“foo”, “bar”, “baz”, “qux”, “quux”, “corge”].
+*   Lists are created using square brackets:  '''
+python a = [“foo”, “bar”, “baz”, “qux”, “quux”, “corge”].
+'''
 *   Python follows a zero-based indexing approach  
 
 
