@@ -12,8 +12,6 @@ All of which support indexing.
 
 ## Low Level Arrays
 
-*   Focus on low level computer theory
-
 **Low-level comp architecture**
 
 *   Memory stored in bits, stored in units called bytes
@@ -34,6 +32,7 @@ _Copying Arrays_
 *   counters = [0] \* 8 - All 8 cells reference the same object! - We rely on the object being mutable - counters[2] += 1 does not change the value of the existing int instances - computes a new integer
 *   `primes.extend(extras)` will add the references to the first list
 
+## Dictionaries
 
 ## Stacks, Queues and Deques
 
