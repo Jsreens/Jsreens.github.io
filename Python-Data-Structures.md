@@ -48,7 +48,7 @@ _Copying Arrays_
 *   Tuples are identical to lists in all respects, except for the following properties:
 	1. Tuples are defined by enclosing the elements in parentheses “(  )” instead of square brackets “[  ]”.
 	2. Tuples are immutable.
-![Time Complexities]([[url] "BigO")
+![Time Complexities]([(https://github.com/Jsreens/Jsreens.github.io/blob/main/ListBigO.PNG)]"BigO")
 ## Stacks, Queues and Deques
 
 **What is a stack?**
