@@ -49,6 +49,7 @@ _Copying Arrays_
 	1. Tuples are defined by enclosing the elements in parentheses “(  )” instead of square brackets “[  ]”.
 	2. Tuples are immutable.
 ![Time Complexities](/Jsreens/Jsreens.github.io/blob/main/ListBigO.PNG)"BigO")
+<img src="https://github.com/Jsreens/Jsreens.github.io/blob/main/ListBigO.PNG)" alt="List Big O" title="List Big O">
 ## Stacks, Queues and Deques
 
 **What is a stack?**
