@@ -32,17 +32,23 @@ _Copying Arrays_
 *   counters = [0] \* 8 - All 8 cells reference the same object! - We rely on the object being mutable - counters[2] += 1 does not change the value of the existing int instances - computes a new integer
 *   `primes.extend(extras)` will add the references to the first list
 
-## Lists 
+## Lists & Tuples
 
 **What is a List?**
-*   Lists are one of 4 built-in data types in Python used to store collections of data, the other 3 are Tuples, Set, and Dictionary, all with different qualities and usage.
+*   Lists are one of 4 built-in data types in Python used to store collections of data, the other 3 are Tuples, Set, and Dictionary, all with different qualities and usage. 
+*   Lists are ordered: A list is not merely a collection of objects. It is an ordered collection of objects. The order in  which you specify the elements when you define a list is an innate characteristic of that list and is maintained for that list’s lifetime.
+*   Lists are Heterogenous: A list can contain an assortment of objects.
+*    Lists are Mutable: Once a list has been created, elements can be added, deleted, shifted, and moved around  at will. Python provides a wide range of ways to modify lists.
 *   Lists are used to store multiple items in a single variable 
-*   Lists are created using square brackets:  '''
-python a = [“foo”, “bar”, “baz”, “qux”, “quux”, “corge”].
-'''
+*   Lists are created using square brackets: a = [“foo”, “bar”, “baz”, “qux”, “quux”, “corge”].
 *   Python follows a zero-based indexing approach  
+*   The elements of the list could also be accessed using negative indices.
 
-
+**What is a Tuple?**
+*   Tuples are identical to lists in all respects, except for the following properties:
+	1. Tuples are defined by enclosing the elements in parentheses “(  )” instead of square brackets “[  ]”.
+	2. Tuples are immutable.
+![Time Complexities]([[url] "BigO")
 ## Stacks, Queues and Deques
 
 **What is a stack?**
